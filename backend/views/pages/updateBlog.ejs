@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" type="text/css" href="/css/update.css" />
+  </head>
+  <body>
+    <h1>Update Blog</h1>
+    <div class="update-blog-form-container">
+      <form
+        action="/blog/<%= specificBlog._id %>/update?_method=PUT"
+        method="post"
+      >
+        <input
+          type="text"
+          name="title"
+          placeholder="title"
+          value="<%= specificBlog.title %> "
+        />
+        <input
+          type="text"
+          name="author"
+          placeholder="author"
+          value="<%= specificBlog.author %> "
+        />
+        <textarea type="textarea" name="body">
+<%= specificBlog.body %>
+</textarea
+        >
+        <button type="submit">Update Blog</button>
+      </form>
+    </div>
+
+    <footer><%- include('../partials/footer') %></footer>
+  </body>
+</html>

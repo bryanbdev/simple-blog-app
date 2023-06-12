@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+    <link rel="stylesheet" type="text/css" href="/css/home.css" />
+  </head>
+  <body>
+    <%- include('../partials/header'); %>
+
+    <h1>NEW Blog App</h1>
+
+    <div class="container">
+      <h2>Number of Blogs: <%= blogs.length %></h2>
+      <button>
+        <a href="/blog/create">Add New Blog</a>
+      </button>
+      <% blogs.map( blog => { %>
+      <a class="blog-link" href="/blog/<%=blog._id%>">
+        <div class="blog-container">
+          <h3 class="blog-title"><%= blog.title %></h3>
+          <p class="blog-author"><%= blog.author %></p>
+          <p class="blog-body"><%= blog.body %></p>
+        </div>
+      </a>
+      <% }) %>
+    </div>
+
+    <footer><%- include('../partials/footer'); %></footer>
+  </body>
+</html>

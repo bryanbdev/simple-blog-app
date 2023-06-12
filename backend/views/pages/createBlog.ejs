@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" type="text/css" href="/css/create.css" />
+  </head>
+  <body>
+    <%- include('../partials/header') %>
+    <div class="create-blog-container">
+      <h1>Let's Create A Blog</h1>
+      <div class="form-container">
+        <form method="POST" action="/blog/create">
+          <input type="text" placeholder="title" name="title" />
+          <textarea type="text" placeholder="body" name="body"></textarea>
+          <input type="text" placeholder="author" name="author" />
+          <button type="submit">Create Blog</button>
+        </form>
+      </div>
+    </div>
+    <footer><%- include('../partials/footer') %></footer>
+  </body>
+</html>

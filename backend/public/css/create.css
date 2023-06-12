@@ -1,0 +1,32 @@
+.create-blog-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: yellow;
+}
+
+.form-container {
+    background-color: rebeccapurple;
+
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form button, textarea {
+    margin: 10px;
+    width: 350px;
+}
+
+form input {
+    height: 50px;
+}
+
+form textarea {
+    min-height: 150px;
+    max-height: 200px;
+    max-width: 350px;
+    resize: none;
+}

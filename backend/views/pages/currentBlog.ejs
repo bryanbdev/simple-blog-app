@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" type="text/css" href="/css/current.css" />
+  </head>
+  <body>
+    <div class="current-blog-container">
+      <h1 class="blog-title"><%= currentBlog.title %></h1>
+      <span class="blog-author"><%= currentBlog.author %></span>
+      <p class="blog-body"><%= currentBlog.body %></p>
+      <button>
+        <a href="/blog/<%=currentBlog._id%>/update">Edit</a>
+      </button>
+      <form action="/blog/<%=currentBlog._id%>?_method=DELETE" method="post">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+    <footer><%- include('../partials/footer') %></footer>
+  </body>
+</html>
