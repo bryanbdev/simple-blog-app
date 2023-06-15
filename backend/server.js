@@ -12,7 +12,7 @@ app.set("view engine", "ejs");
 // middleware
 app.use(express.json()); // allow express to read JSON files
 app.use(express.static("public")); // allow us to use css files
-app.use(express.urlencoded({ extended: true })); //parse urlencoded request bodies <-- help read data on post methods
+app.use(express.urlencoded({ extended: true })); //parse urlencoded request bodies <-- help read form data on post methods
 app.use(methodOverride("_method")); // override for put and delete requests from forms
 app.use("/", blogRoutes); // handle all blog routes
 
